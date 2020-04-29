@@ -90,7 +90,7 @@ foreach ($ua_blacklist as $ua) {
 // exact binary that was presented to the blue
 $utils = new utils;
 $utils->createLog($workingDir);
-$isOkay = $utils->isOkay($rhost, $ip_blacklist, $geo->countryCode, $region, $uaFound);
+$isOkay = $utils->isOkay($rhost, $ip_blacklist, $geo->countryCode, $region, $uaFound, $srvWrong);
 
 if ($srvWrong == TRUE) {
   if ($isOkay == FALSE) {
@@ -117,7 +117,7 @@ if ($srvWrong == TRUE) {
 }
 
 
-$utils->writeLog($workingDir, $rhost, $geo->countryCode, $uaString, $name);
+$utils->writeLog($workingDir, $rhost, $geo->countryCode, $uaString, $name, $srvWrong);
 $utils->cleanUp($workingDir, $name);
 
 ?>
