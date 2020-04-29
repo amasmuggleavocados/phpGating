@@ -117,7 +117,7 @@ if ($srvWrong == TRUE) {
 }
 
 
-$utils->writeLog($workingDir, $rhost, $geo->countryCode, $uaString, $name, $srvWrong);
+$utils->writeLog($workingDir, $rhost, $geo->countryCode, $uaString, $name, $srvWrong, $isOkay);
 $utils->cleanUp($workingDir, $name);
 
 ?>
