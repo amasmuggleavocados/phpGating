@@ -27,7 +27,7 @@ $svr = '127.0.0.1';
 
 // Name of payload(s). When it is served to the user
 // it will have its named randomized as well as
-// random data appeneded to modify the hash
+// random data appended to modify the hash
 $bit32 = 'good.exe';
 $bit64 = 'good64.exe';
 
